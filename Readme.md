@@ -7,8 +7,10 @@
 * Скопировать файлы в соответвии с путями (корень репозитория соответвует корню системы
 * `apt -y install python3-smbus python3-netifaces python3-willow`
 * `vi  /boot/config.txt`; uncoment `dtparam=i2c_arm=on`
+```
 cat /boot/config.txt  | grep i2c
 dtparam=i2c_arm=on
+```
 * add `i2c-dev` to `/etc/modules`
 * reboot (что бы включить I2C
 * `systemctl  start poe-hat-screen`
