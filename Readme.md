@@ -5,13 +5,15 @@
 
 # использование
 * Скопировать файлы в соответвии с путями (корень репозитория соответвует корню системы
-* apt -y install python3-smbus python3-netifaces python3-willow
-* vi  /boot/config.txt; uncoment tparam=i2c_arm=on
-* add i2c-dev to /etc/modules
+* `apt -y install python3-smbus python3-netifaces python3-willow`
+* `vi  /boot/config.txt`; uncoment `dtparam=i2c_arm=on`
+cat /boot/config.txt  | grep i2c
+dtparam=i2c_arm=on
+* add `i2c-dev` to `/etc/modules`
 * reboot (что бы включить I2C
-* systemctl  start poe-hat-screen
-* systemctl  status poe-hat-screen
-* systemctl  enable poe-hat-screen
+* `systemctl  start poe-hat-screen`
+* `systemctl  status poe-hat-screen`
+* `systemctl  enable poe-hat-screen`
 
 # возможные проблемы
 Проверить что i2c работает можно например так:
