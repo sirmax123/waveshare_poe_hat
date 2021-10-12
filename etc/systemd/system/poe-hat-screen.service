@@ -1,0 +1,15 @@
+[Unit]
+Description=Simple script to show data on POE hat screen.
+After=network.target
+
+[Service]
+PIDFile=/var/run/poe_hat.pid
+Type=simple
+
+ExecStart=/usr/local/poe_hat/poe_hat.py
+
+SuccessExitStatus=0
+
+
+[Install]
+WantedBy=multi-user.target
