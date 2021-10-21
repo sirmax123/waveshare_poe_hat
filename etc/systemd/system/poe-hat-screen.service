@@ -5,8 +5,9 @@ After=network.target
 [Service]
 PIDFile=/var/run/poe_hat.pid
 Type=simple
-
 ExecStart=/usr/local/poe_hat/poe_hat.py
+Restart=always
+RestartSec=30
 
 SuccessExitStatus=0
 
