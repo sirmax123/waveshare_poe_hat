@@ -14,12 +14,16 @@ if os.path.exists(libdir):
 
 from waveshare_POE_HAT_B import POE_HAT_B
 
+try:
+  interface = os.environ['INTERFACE']
+except:
+  print("Using default interface: eth0")
 
 logging.basicConfig(level=logging.INFO)
 #Font.ttf
 #Courier_New.ttf
 #
-POE = POE_HAT_B.POE_HAT_B(font_size=12, font_name='Courier_New.ttf', string_height_in_pixels=10)
+POE = POE_HAT_B.POE_HAT_B(font_size=12, font_name='Courier_New.ttf', string_height_in_pixels=10,  interface=interface)
 try:
     while(1):
         POE.POE_HAT_Display(FAN_TEMP=25)

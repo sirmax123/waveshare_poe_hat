@@ -8,7 +8,7 @@ Type=simple
 ExecStart=/usr/local/poe_hat/poe_hat.py
 Restart=always
 RestartSec=30
-
+EnvironmentFile=-/etc/default/poe_hat
 SuccessExitStatus=0
 
 
