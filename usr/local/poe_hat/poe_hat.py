@@ -18,6 +18,7 @@ try:
   interface = os.environ['INTERFACE']
 except:
   print("Using default interface: eth0")
+  interface = 'eth0'
 
 logging.basicConfig(level=logging.INFO)
 #Font.ttf
